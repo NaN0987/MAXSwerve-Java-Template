@@ -35,6 +35,11 @@ public class MAXSwerveModule {
    * encoder, and PID controller. This configuration is specific to the REV
    * MAXSwerve Module built with NEOs, SPARKS MAX, and a Through Bore
    * Encoder.
+   * 
+   * @param drivingCANId The CAN ID of the driving motor.
+   * @param turningCANId The CAN ID of the turning motor.
+   * @param chassisAngularOffset The angle, in radians, outputted by the absolute 
+   * encoder when the wheel is facing 0 degrees.
    */
   public MAXSwerveModule(int drivingCANId, int turningCANId, double chassisAngularOffset) {
     m_drivingSparkMax = new CANSparkMax(drivingCANId, MotorType.kBrushless);
